@@ -10,4 +10,3 @@ Drop down (or clickable options) menu will allow the user the option to search c
 
 User will then be able to click their preffered course and in return will see details such as the par of the course, distance from each tee box, etc.
 
-test test
