@@ -1,19 +1,10 @@
-/* body, html {
+body, html {
     height: 100%;
   }
   
-  #bgimg1 {
-    background: black url(./assets/Baseball-background1.jpeg);
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    
-}
+ 
 
-.column {
+/*.column {
     float: left;
     width: 50%;
   }
@@ -23,25 +14,31 @@
     display: table;
     clear: both;
   } */
-  body {
-    margin: 40px;
-  }
+ 
+  #bgimg1 {
+    background: black url(./assets/Baseball-background1.jpeg);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
   
   .wrapper {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: 500px 500px;
+      grid-template-columns: 1fr 1fr;
       
-      color: #444;
+      
+      
     }
   
     .box {
-      background-color: #444;
+      background-color: #000;
       color: #fff;
       border-radius: 5px;
       padding: 20px;
-      font-size: 150%;
-  
+      opacity: .5;
     }
   
     .a {
@@ -55,4 +52,8 @@
     .c {
       grid-column: 2 ;
       grid-row: 2 ;
+    }
+
+    div {
+        text-align: center;
     }

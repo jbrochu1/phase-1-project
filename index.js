@@ -1,4 +1,4 @@
-
+const schedule = document.getElementById('schedule');
 const options = {
     method: 'GET',
     headers: {
@@ -19,7 +19,7 @@ fetch('https://sportspage-feeds.p.rapidapi.com/games?odds=spread&league=MLB', op
     const currentTeams = (finalGame) => {
         const teams = document.createElement("div");
         teams.innerHTML = finalGame.teams.away.team + ' @ ' + finalGame.teams.home.team;
-        document.body.append(teams);
+        schedule.append(teams);
 
     teams.addEventListener('click', () => {
         console.log(finalGame);
