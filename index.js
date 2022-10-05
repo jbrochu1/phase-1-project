@@ -1,5 +1,7 @@
 const scheduleBar = document.getElementById('schedule-bar');
 const detailBar = document.getElementById('detail-bar');
+const watchButton = document.querySelector('#watchButton');
+const watchBar = document.querySelector('#watchBar');
 const options = {
     method: 'GET',
     headers: {
@@ -24,12 +26,12 @@ fetch('https://sportspage-feeds.p.rapidapi.com/games?odds=spread&league=MLB', op
 
     teams.addEventListener('click', () => {
         console.log(finalGame);
-        gameDetails(finalGame);
+        renderDetails(finalGame);
         
         })
     }
 
-        const gameDetails = (finalGame) => {
+        const renderDetails = (finalGame) => {
             //const element = document.createElement("div");
                 //console.log(gameDetails(finalGame));
                 console.log(finalGame);
@@ -54,7 +56,17 @@ fetch('https://sportspage-feeds.p.rapidapi.com/games?odds=spread&league=MLB', op
                     currentScore.innerHTML = finalGame.scoreboard.score.away + ' - ' + finalGame.scoreboard.score.home;
 
                 }
-            }
+                
+                watchButton.addEventListener('click', addGame(teams))
+                    
+                }
+
+        function addGame(teams) {
+            const p = document.createElement('p')
+            p.textContent = teams
+            watchBar.append(p);
+        }
+
 
 
 
