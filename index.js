@@ -29,45 +29,6 @@ fetch('https://sportspage-feeds.p.rapidapi.com/games?odds=spread&league=MLB', op
         })
     }
 
-
-    // const gameItem = (finalGame) => {
-    //         // document.body.append(element);
-    //         //console.log(gameDetails(finalGame));
-    //         console.log(finalGame);
-
-    //         const details = document.createElement("p");
-    //         details.innerHTML = finalGame.details.seasonType;
-    //         document.body.append(details);
-
-    //         const odds = document.createElement("p");
-    //         odds.innerHTML = finalGame.odds[0].spread.current.awayOdds + ' ' + finalGame.odds[0].spread.current.homeOdds;
-    //         document.body.append(odds);
-
-    //         const venue = document.createElement("p");
-    //         venue.innerHTML = finalGame.venue.name;
-    //         document.body.append(venue);
-
-    //         const gameTime = document.createElement("p");
-    //         gameTime.innerHTML = finalGame.schedule.date;
-    //         let todaysGame = new Date(finalGame.schedule.date);
-    //         //console.log(finalGame.schedule.date, todaysGame);
-    //         gameTime.innerHTML = todaysGame.toLocaleDateString('en-EN') + ' ' + todaysGame.toLocaleTimeString('en-EN');
-    //         document.body.append(gameTime);
-
-    //         const gameStatus = document.createElement("p");
-    //         gameStatus.innerHTML = finalGame.status;
-    //         document.body.append(gameStatus);
-
-    //         if (finalGame.scoreboard) {
-    //             const currentScore = document.createElement("p");
-    //             currentScore.innerHTML = finalGame.scoreboard.score.away + ' - ' + finalGame.scoreboard.score.home;
-    //             document.body.append(currentScore);
-
-    //         }
-    //     }
-
-
-
         const gameDetails = (finalGame) => {
             //const element = document.createElement("div");
                 //console.log(gameDetails(finalGame));
