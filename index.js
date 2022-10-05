@@ -14,7 +14,7 @@ const options = {
 fetch('https://sportspage-feeds.p.rapidapi.com/games?odds=spread&league=MLB', options)
     .then(response => response.json())
     .then(response => {
-        console.log(response);
+        //console.log(response);
         response.results.forEach(finalGame => { currentTeams(finalGame) })
     })
 
@@ -26,7 +26,7 @@ const currentTeams = (finalGame) => {
     scheduleBar.append(teams);
 
     teams.addEventListener('click', () => {
-        console.log(finalGame);
+        //console.log(finalGame);
         renderDetails(finalGame);
 
     })
@@ -35,7 +35,7 @@ const currentTeams = (finalGame) => {
 const renderDetails = (finalGame) => {
     //const element = document.createElement("div");
     //console.log(gameDetails(finalGame));
-    console.log(finalGame);
+    //console.log(finalGame);
     const details = document.querySelector('#details');
     details.innerHTML = finalGame.details.seasonType;
     const odds = document.querySelector('#odds');
@@ -55,7 +55,6 @@ const renderDetails = (finalGame) => {
     if (finalGame.scoreboard) {
         const currentScore = document.querySelector('#score');
         currentScore.innerHTML = finalGame.scoreboard.score.away + ' - ' + finalGame.scoreboard.score.home;
-
     }
 
 }
@@ -68,6 +67,4 @@ watchButton.addEventListener('click', () => {
 clearButton.addEventListener('click', () => {
     watchBar.textContent = "";    
 })
-
-
     // .catch(err => console.error(err));
