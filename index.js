@@ -57,22 +57,23 @@ const renderDetails = (finalGame) => {
 
     }
 
-    watchButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        let p = document.createElement('p');
-        
-        p = teams;
-        watchBar.append(p);
+    watchButton.addEventListener('click', addGame)
+    
+    // (e) => {
+    //     e.preventDefault();
+    //     let p = document.createElement('p');
+    //     p = teams.innerHTML;
+    //     watchBar.append(p);
 
-    })
+    // })
 
 }
 
-// function addGame(teams) {
-//     const p = document.createElement('p')
-//     p = teams;
-//     watchBar.append(p);
-// }
+function addGame() {
+    let p = document.createElement("p");
+    p = teams.innerHTML;
+    watchBar.append(p);
+}
 
 
 
