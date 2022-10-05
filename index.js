@@ -1,6 +1,7 @@
 const scheduleBar = document.getElementById('schedule-bar');
 const detailBar = document.getElementById('detail-bar');
 const watchButton = document.querySelector('#watchButton');
+const clearButton = document.querySelector('#clearButton');
 const watchBar = document.querySelector('#watchBar');
 const options = {
     method: 'GET',
@@ -57,25 +58,16 @@ const renderDetails = (finalGame) => {
 
     }
 
-    watchButton.addEventListener('click', addGame)
-    
-    // (e) => {
-    //     e.preventDefault();
-    //     let p = document.createElement('p');
-    //     p = teams.innerHTML;
-    //     watchBar.append(p);
-
-    // })
-
 }
-
-function addGame() {
+watchButton.addEventListener('click', () => {
     let p = document.createElement("p");
-    p = teams.innerHTML;
+    p.textContent = teams.innerHTML;
     watchBar.append(p);
-}
+})
 
-
+clearButton.addEventListener('click', () => {
+    watchBar.textContent = "";    
+})
 
 
     // .catch(err => console.error(err));
