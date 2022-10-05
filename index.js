@@ -1,4 +1,5 @@
-const schedule = document.getElementById('schedule');
+const scheduleBar = document.getElementById('schedule-bar');
+const detailBar = document.getElementById('detail-bar');
 const options = {
     method: 'GET',
     headers: {
@@ -17,9 +18,9 @@ fetch('https://sportspage-feeds.p.rapidapi.com/games?odds=spread&league=MLB', op
         // details.innerHTML = JSON.stringify(response);
 
     const currentTeams = (finalGame) => {
-        const teams = document.createElement("div");
+        const teams = document.createElement("p");
         teams.innerHTML = finalGame.teams.away.team + ' @ ' + finalGame.teams.home.team;
-        schedule.append(teams);
+        scheduleBar.append(teams);
 
     teams.addEventListener('click', () => {
         console.log(finalGame);
@@ -36,31 +37,31 @@ fetch('https://sportspage-feeds.p.rapidapi.com/games?odds=spread&league=MLB', op
 
             const details = document.createElement("div");
             details.innerHTML = finalGame.details.seasonType;
-            document.body.append(details);
+            detailBar.append(details);
 
             const odds = document.createElement("div");
             odds.innerHTML = finalGame.odds[0].spread.current.awayOdds + ' ' + finalGame.odds[0].spread.current.homeOdds;
-            document.body.append(odds);
+            detailBar.append(odds);
 
             const venue = document.createElement("div");
             venue.innerHTML = finalGame.venue.name;
-            document.body.append(venue);
+            detailBar.append(venue);
 
             const gameTime = document.createElement("div");
             gameTime.innerHTML = finalGame.schedule.date;
             let todaysGame = new Date(finalGame.schedule.date);
             //console.log(finalGame.schedule.date, todaysGame);
             gameTime.innerHTML = todaysGame.toLocaleDateString('en-EN') + ' ' + todaysGame.toLocaleTimeString('en-EN');
-            document.body.append(gameTime);
+            detailBar.append(gameTime);
 
             const gameStatus = document.createElement("div");
             gameStatus.innerHTML = finalGame.status;
-            document.body.append(gameStatus);
+            detailBar.append(gameStatus);
 
             if (finalGame.scoreboard) {
                 const currentScore = document.createElement("div");
                 currentScore.innerHTML = finalGame.scoreboard.score.away + ' - ' + finalGame.scoreboard.score.home;
-                document.body.append(currentScore);
+                detailBar.append(currentScore);
 
             }
         }
