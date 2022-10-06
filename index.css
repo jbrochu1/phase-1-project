@@ -58,11 +58,21 @@ body, html {
         text-align: center;
     }
 
+    #watchButton {
+        font-size: 125%;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+    }
+
     #watchButton:hover {
         
         background-color: purple;
         font-size: 150%;
         color: orange;
+    }
+
+    #clearButton {
+        font-size: 125%;
     }
 
     #clearButton:hover {
