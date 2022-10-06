@@ -57,3 +57,31 @@ body, html {
     div {
         text-align: center;
     }
+
+    #watchButton:hover {
+        
+        background-color: purple;
+        font-size: 150%;
+        color: orange;
+    }
+
+    #clearButton:hover {
+        background-color: purple;
+        font-size: 150%;
+        color: orange;
+        
+    }
+
+    #schedule-bar p:hover, #schedule-bar p:active {
+        background-color: purple;
+        font-size: 150%;
+        color: orange;
+    }
+
+    .box h2  {
+        text-decoration: underline;
+    }
+
+    h1 {
+        background-color: orange;
+    }
