@@ -76,12 +76,25 @@ body, html {
         background-color: purple;
         font-size: 150%;
         color: orange;
+        cursor: grab;
     }
 
     .box h2  {
         text-decoration: underline;
     }
 
-    h1 {
+    #header {
         background-color: orange;
+        opacity: .7;
+        mix-blend-mode: screen;
+    }
+    
+    h1 {
+        
+        mix-blend-mode: multiply;   
+    }
+
+    #details {
+        text-transform: uppercase;
+        
     }
