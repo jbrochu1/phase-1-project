@@ -1,6 +1,8 @@
 body, html {
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(100, 39, 126);
+    /* scroll-behavior: auto;    */
   }
  
   #bgimg1 {
@@ -14,7 +16,7 @@ body, html {
   height: auto;
 	
   /* Set up positioning */
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   
@@ -52,6 +54,7 @@ body, html {
     .c {
       grid-column: 2;
       grid-row: 2;
+      overflow-y: auto; 
     }
 
     div {
